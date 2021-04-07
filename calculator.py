@@ -7,17 +7,19 @@ userInput = input('What is the number: ')
 print ('Your number is:', userInput) # TODO remove for production
 userNumber = float(userInput) #
 
+def calculate(userNumber, conversionType):
+    if conversionType == '1':
+        print ("in to mm")
+        userAnswer = userNumber * 25.4
+    if conversionType == '2':
+        print ('mm to in')
+        userAnswer = userNumber / 25.4
+    return userAnswer
+
 # Perform the conversion
 
-# Convert in to mm 25.4 mm per in
-if userConversionInput == '1':
-    print ('in to mm')
-    userAnswer = userNumber * 25.4
+calcValue = calculate(userNumber, userConversionInput)
 
-# Convert from mm to in
-if userConversionInput == '2':
-    print ('mm to in')
-    userAnswer = userNumber / 25.4
 
 # Print out the answer
-print ('The answer is: ', userAnswer)
+print ('The answer is:', calcValue)
