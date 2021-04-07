@@ -7,26 +7,19 @@ userInput = input('What is the number: ')
 print ('Your number is:', userInput) # TODO remove for production
 userNumber = float(userInput) #
 
-def calculate(userNumber, conversionType):
-    if conversionType == '1':
-                userAnswer = userNumber * 25.4
-    if conversionType == '2':
-                userAnswer = userNumber / 25.4
-    return userAnswer
-
-def printResults(userConversionInput, userInput, calcValue):
+def printResults(userConversionInput, userInputx):
     if userConversionInput == '1':
+        userAnswer = userNumber * 25.4
         conversionUnit = ("in")
         ConvertedUnit = ('mm')
     if userConversionInput == '2':
+        userAnswer = userNumber / 25.4
         conversionUnit = ('mm ')
         ConvertedUnit = ('in')
-        
-    print ("The answer is", userInput, conversionUnit, "=", calcValue, ConvertedUnit + ".")
+    print ("The answer is", userInputx, conversionUnit, "=", userAnswer, ConvertedUnit + ".")
 
 # Perform the conversion
 
-calcValue = calculate(userNumber, userConversionInput)
 # Print out the answer
 
-printResults(userConversionInput, userInput, calcValue)
+printResults(userConversionInput, userInput)
