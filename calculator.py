@@ -9,17 +9,24 @@ userNumber = float(userInput) #
 
 def calculate(userNumber, conversionType):
     if conversionType == '1':
-        print ("in to mm")
-        userAnswer = userNumber * 25.4
+                userAnswer = userNumber * 25.4
     if conversionType == '2':
-        print ('mm to in')
-        userAnswer = userNumber / 25.4
+                userAnswer = userNumber / 25.4
     return userAnswer
+
+def printResults(userConversionInput, userInput, calcValue):
+    if userConversionInput == '1':
+        conversionUnit = ("in")
+        ConvertedUnit = ('mm')
+    if userConversionInput == '2':
+        conversionUnit = ('mm ')
+        ConvertedUnit = ('in')
+        
+    print ("The answer is", userInput, conversionUnit, "=", calcValue, ConvertedUnit + ".")
 
 # Perform the conversion
 
 calcValue = calculate(userNumber, userConversionInput)
-
-
 # Print out the answer
-print ('The answer is:', calcValue)
+
+printResults(userConversionInput, userInput, calcValue)
